@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Thinking - วิชาการออกแบบแบบคิด</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .hero h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn-start {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-start:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        /* 5 Steps Section */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .step-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .step-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .step-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Features Section */
+        .features {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .features h2 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h4 {
+            color: #764ba2;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top: 2px solid #667eea;
+        }
+
+        footer p {
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .hero {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>🧠 Design Thinking</h1>
+        <p>วิชาการออกแบบแบบคิด - เรียนรู้การแก้ปัญหาอย่างสร้างสรรค์</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>ยินดีต้อนรับสู่โลก Design Thinking</h2>
+            <p>
+                Design Thinking คือวิธีการคิดและทำงานที่มุ่งหมายไปที่ผู้ใช้ 
+                และการแก้ปัญหาอย่างสร้างสรรค์ ผ่านการทำความเข้าใจปัญหา 
+                การจินตนาการวิธีแก้ ปัญหา และการทดลองสร้างสรรค์
+            </p>
+            <button class="btn-start">เริ่มเรียนรู้</button>
+        </section>
+
+        <!-- 5 Steps -->
+        <section class="steps">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>🤔 Empathize</h3>
+                <p>ทำความเข้าใจความต้องการและปัญหาของผู้ใช้จริง</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>📌 Define</h3>
+                <p>นิยามปัญหาให้ชัดเจนและกำหนดเป้าหมายที่ต้องการ</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>💡 Ideate</h3>
+                <p>สร้างสรรค์และสร้างแนวคิดใหม่ๆ อย่างเสรี</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <h3>🔨 Prototype</h3>
+                <p>สร้างต้นแบบของแนวคิดเพื่อทดสอบ</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <h3>🧪 Test</h3>
+                <p>ทดสอบและรับฟีดแบ็กจากผู้ใช้เพื่อปรับปรุง</p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2>ทำไมต้องเรียน Design Thinking</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <h4>เน้นผู้ใช้</h4>
+                    <p>แก้ปัญหาที่ตรงใจผู้ใช้จริง</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🚀</div>
+                    <h4>นวัตกรรม</h4>
+                    <p>สร้างสรรค์ไอเดียใหม่ๆ ที่ไม่เคยมี</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h4>อย่างรวดเร็ว</h4>
+                    <p>ทดลองและเรียนรู้อย่างรวดเร็ว</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">👥</div>
+                    <h4>ทีมงาน</h4>
+                    <p>ร่วมมือกันเพื่อผลลัพธ์ที่ดี</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Design Thinking Course | ยินดีต้อนรับการเรียนรู้เพื่อการสร้างสรรค์</p>
+    </footer>
+</body>
+</html>
